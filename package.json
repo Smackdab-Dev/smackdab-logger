@@ -1,0 +1,42 @@
+{
+  "name": "@smackdabdevops/logger",
+  "version": "1.0.0",
+  "type": "commonjs",
+  "description": "Prism dev logger — pino transport with ANSI formatting for Smackdab NestJS apps",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./transport": {
+      "types": "./dist/transport.d.ts",
+      "default": "./dist/transport.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "@smackdabdevops:registry": "https://npm.pkg.github.com"
+  },
+  "peerDependencies": {
+    "pino": ">=8.0.0"
+  },
+  "dependencies": {
+    "pino-abstract-transport": "^2.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.0",
+    "typescript": "~5.6.0"
+  },
+  "license": "UNLICENSED",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SmackdabDevOps/smackdab-logger.git"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json"
+  }
+}
